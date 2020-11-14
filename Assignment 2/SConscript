@@ -1,0 +1,6 @@
+Import('*')
+
+SimObject('AddNumber.py')
+Source('add_number.cc')
+DebugFlag('MATRIX')
+DebugFlag('RESULT')
