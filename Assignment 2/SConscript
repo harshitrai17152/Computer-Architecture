@@ -1,0 +1,6 @@
+Import('*')
+
+SimObject('MatInv.py')
+Source('mat_inv.cc')
+DebugFlag('MATRIX')
+DebugFlag('RESULT')
