@@ -2,8 +2,6 @@
 #include "debug/MATRIX.hh"
 #include "debug/RESULT.hh"
 #include <iostream>
-#include<stdio.h>
-#include <cstdio>
 #include "base/trace.hh"
 
 MatInv::MatInv(MatInvParams *params) :
