@@ -2,6 +2,9 @@
 #include "debug/MATRIX.hh"
 #include "debug/RESULT.hh"
 #include <iostream>
+#include<stdio.h>
+#include <cstdio>
+#include "base/trace.hh"
 
 MatInv::MatInv(MatInvParams *params) :
     SimObject(params), event([this]{processEvent();},name())
@@ -21,6 +24,7 @@ MatInv::processEvent()
   	if(DTRACE(MATRIX))
   	{
 		DPRINTF(MATRIX,"MATRIX DEBUG flag enabled");
+		std::cout<<"\n";    
 		std::cout<<"Size Of Matrix is: "<<N;    
 	  	std::cout<<"\n";    
 	  	std::cout<<"Input Matrix is as follows:\n";    
@@ -38,6 +42,7 @@ MatInv::processEvent()
 		if(ans)
 		{ 	
 			DPRINTF(RESULT,"RESULT DEBUG flag enabled");
+			std::cout<<"\n";    
 		  	std::cout<<"Inverse of Matrix is as follows:\n";    
 		  	for(int i=0;i<N;i++) 
   			{
@@ -145,4 +150,3 @@ MatInvParams::create()
 {
     return new MatInv(this);
 }
-
